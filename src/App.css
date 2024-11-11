@@ -1,38 +1,199 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* App Container */
+.app-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .app-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #1a365d;
   }
-  to {
-    transform: rotate(360deg);
+  
+  /* Card Styles */
+  .action-list-card,
+  .impact-summary-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
   }
-}
+  
+  .card-header {
+    padding: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #2d3748;
+  }
+  
+  .card-content {
+    padding: 1rem;
+  }
+  
+  /* Action List Styles */
+  .action-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .action-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+  }
+  
+  .action-name {
+    font-weight: 500;
+  }
+  
+  .action-reduction {
+    margin-left: 0.5rem;
+    font-size: 0.875rem;
+    color: #718096;
+  }
+  
+  /* Button Styles */
+  .add-button,
+  .delete-button,
+  .clear-button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .add-button {
+    background-color: #4299e1;
+    color: white;
+    border: none;
+  }
+  
+  .add-button:hover {
+    background-color: #3182ce;
+  }
+  
+  .delete-button {
+    background-color: #f56565;
+    color: white;
+    border: none;
+  }
+  
+  .delete-button:hover {
+    background-color: #e53e3e;
+  }
+  
+  .clear-button {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #e2e8f0;
+    color: #4a5568;
+  }
+  
+  .clear-button:hover {
+    background-color: #f7fafc;
+  }
+  
+  /* Impact Summary Styles */
+  .impact-summary {
+    padding: 1rem;
+    border-radius: 0.375rem;
+    margin-bottom: 1rem;
+  }
+  
+  .impact-low {
+    background-color: #fed7d7;
+    border: 1px solid #fc8181;
+  }
+  
+  .impact-medium {
+    background-color: #feebc8;
+    border: 1px solid #f6ad55;
+  }
+  
+  .impact-high {
+    background-color: #c6f6d5;
+    border: 1px solid #68d391;
+  }
+  
+  .total-reduction {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .trees-equivalent {
+    font-size: 0.875rem;
+  }
+  
+  .tracked-actions {
+    margin-bottom: 1rem;
+  }
+  
+  .tracked-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .action-stats {
+    margin-left: 0.5rem;
+    font-size: 0.875rem;
+    color: #718096;
+  }
+  
+  .empty-state {
+    text-align: center;
+    color: #718096;
+    padding: 2rem 0;
+  }
+  
+  /* Alert Styles */
+  .alert {
+    padding: 1rem;
+    border-radius: 0.375rem;
+    margin-bottom: 1rem;
+  }
+  
+  .progress-alert {
+    background-color: #feebc8;
+    border: 1px solid #f6ad55;
+    color: #c05621;
+  }
+  
+  .success-alert {
+    background-color: #c6f6d5;
+    border: 1px solid #68d391;
+    color: #2f855a;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 640px) {
+    .app-container {
+      padding: 1rem;
+    }
+  
+    .app-title {
+      font-size: 1.5rem;
+    }
+  
+    .action-item,
+    .tracked-action {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+  }
